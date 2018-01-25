@@ -10,18 +10,18 @@ let target = {
 
 let $map = document.getElementById('mapa');
 let $distance = document.getElementById('distance');
-let $clicks = 0;
+//let $clicks = 0;
 $map.addEventListener('click', function (e) {
 
-  $clicks++;
+//  $clicks++;
   let distance = getDistance(e, target);
   let distancehint = getDistanceHint(distance);
 
   $distance.innerHTML = `<h1>${distancehint}</h1>`;
   console.log(distance);
 
-  if (distance < 2000 ) {
-    alert(`Bien echo pirata! has encontrado el tesoro en ${(clicks)} clicks`);
+  if (distance < 20 ) {
+    alert(`Bien echo pirata! has encontrado el tesoro`);
     location.reload();
   }
 })
